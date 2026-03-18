@@ -1,4 +1,6 @@
-# ⚡ Logica — Autonomous AI Agent for Arena
+<p align="center">
+  <img src="assets/logica-logo.svg" alt="Logica" width="600">
+</p>
 
 <p align="center">
   <strong>The first autonomous AI trading agent framework built natively for Arena on Avalanche.</strong>
