@@ -1,9 +1,9 @@
-import OpenClawProtocol
+import LogicaProtocol
 import SwiftUI
 import Testing
-@testable import OpenClaw
+@testable import Logica
 
-private typealias ProtoAnyCodable = OpenClawProtocol.AnyCodable
+private typealias ProtoAnyCodable = LogicaProtocol.AnyCodable
 
 @Suite(.serialized)
 @MainActor

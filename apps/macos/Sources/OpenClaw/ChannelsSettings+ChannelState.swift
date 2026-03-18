@@ -1,4 +1,4 @@
-import OpenClawProtocol
+import LogicaProtocol
 import SwiftUI
 
 extension ChannelsSettings {

@@ -1,4 +1,4 @@
-package ai.openclaw.android.gateway
+package ai.logica.android.gateway
 
 object BonjourEscapes {
   fun decode(input: String): String {

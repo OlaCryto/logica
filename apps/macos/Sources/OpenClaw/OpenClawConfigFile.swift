@@ -1,19 +1,19 @@
-import OpenClawProtocol
+import LogicaProtocol
 import Foundation
 
-enum OpenClawConfigFile {
-    private static let logger = Logger(subsystem: "ai.openclaw", category: "config")
+enum LogicaConfigFile {
+    private static let logger = Logger(subsystem: "ai.logica", category: "config")
 
     static func url() -> URL {
-        OpenClawPaths.configURL
+        LogicaPaths.configURL
     }
 
     static func stateDirURL() -> URL {
-        OpenClawPaths.stateDirURL
+        LogicaPaths.stateDirURL
     }
 
     static func defaultWorkspaceURL() -> URL {
-        OpenClawPaths.workspaceURL
+        LogicaPaths.workspaceURL
     }
 
     static func loadDict() -> [String: Any] {

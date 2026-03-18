@@ -1,8 +1,8 @@
-import OpenClawKit
+import LogicaKit
 import Foundation
 import os
 import Testing
-@testable import OpenClaw
+@testable import Logica
 
 @Suite struct GatewayChannelConnectTests {
     private enum FakeResponse {

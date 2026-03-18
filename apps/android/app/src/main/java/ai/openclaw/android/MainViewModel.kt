@@ -1,13 +1,13 @@
-package ai.openclaw.android
+package ai.logica.android
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import ai.openclaw.android.gateway.GatewayEndpoint
-import ai.openclaw.android.chat.OutgoingAttachment
-import ai.openclaw.android.node.CameraCaptureManager
-import ai.openclaw.android.node.CanvasController
-import ai.openclaw.android.node.ScreenRecordManager
-import ai.openclaw.android.node.SmsManager
+import ai.logica.android.gateway.GatewayEndpoint
+import ai.logica.android.chat.OutgoingAttachment
+import ai.logica.android.node.CameraCaptureManager
+import ai.logica.android.node.CanvasController
+import ai.logica.android.node.ScreenRecordManager
+import ai.logica.android.node.SmsManager
 import kotlinx.coroutines.flow.StateFlow
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {

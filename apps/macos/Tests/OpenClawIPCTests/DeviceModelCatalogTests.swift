@@ -1,5 +1,5 @@
 import Testing
-@testable import OpenClaw
+@testable import Logica
 
 @Suite
 struct DeviceModelCatalogTests {

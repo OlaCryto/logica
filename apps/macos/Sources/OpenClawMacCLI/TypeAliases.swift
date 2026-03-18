@@ -1,5 +1,5 @@
-import OpenClawKit
-import OpenClawProtocol
+import LogicaKit
+import LogicaProtocol
 
-typealias ProtoAnyCodable = OpenClawProtocol.AnyCodable
-typealias KitAnyCodable = OpenClawKit.AnyCodable
+typealias ProtoAnyCodable = LogicaProtocol.AnyCodable
+typealias KitAnyCodable = LogicaKit.AnyCodable

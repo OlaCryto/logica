@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import OpenClaw
+@testable import Logica
 
 @Suite(.serialized) struct TalkAudioPlayerTests {
     @MainActor

@@ -1,4 +1,4 @@
-import OpenClawKit
+import LogicaKit
 import Foundation
 
 enum ChatPayloadDecoding {

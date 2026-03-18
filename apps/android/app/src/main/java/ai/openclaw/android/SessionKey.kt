@@ -1,4 +1,4 @@
-package ai.openclaw.android
+package ai.logica.android
 
 internal fun normalizeMainKey(raw: String?): String {
   val trimmed = raw?.trim()

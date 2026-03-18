@@ -1,4 +1,4 @@
-import OpenClawDiscovery
+import LogicaDiscovery
 import Foundation
 
 enum GatewayDiscoveryHelpers {

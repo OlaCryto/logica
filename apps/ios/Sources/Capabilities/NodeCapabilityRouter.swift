@@ -1,5 +1,5 @@
 import Foundation
-import OpenClawKit
+import LogicaKit
 
 @MainActor
 final class NodeCapabilityRouter {

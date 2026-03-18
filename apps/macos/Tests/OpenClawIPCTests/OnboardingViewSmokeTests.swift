@@ -1,7 +1,7 @@
-import OpenClawDiscovery
+import LogicaDiscovery
 import SwiftUI
 import Testing
-@testable import OpenClaw
+@testable import Logica
 
 @Suite(.serialized)
 @MainActor

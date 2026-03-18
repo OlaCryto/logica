@@ -75,7 +75,7 @@ const findLatestMtime = (dirPath, shouldSkip) => {
 };
 
 const shouldBuild = () => {
-  if (env.OPENCLAW_FORCE_BUILD === "1") {
+  if (env.LOGICA_FORCE_BUILD === "1") {
     return true;
   }
   const stampMtime = statMtime(buildStampPath);
@@ -101,14 +101,14 @@ const shouldBuild = () => {
 };
 
 const logRunner = (message) => {
-  if (env.OPENCLAW_RUNNER_LOG === "0") {
+  if (env.LOGICA_RUNNER_LOG === "0") {
     return;
   }
-  process.stderr.write(`[openclaw] ${message}\n`);
+  process.stderr.write(`[logica] ${message}\n`);
 };
 
 const runNode = () => {
-  const nodeProcess = spawn(process.execPath, ["openclaw.mjs", ...args], {
+  const nodeProcess = spawn(process.execPath, ["logica.mjs", ...args], {
     cwd,
     env,
     stdio: "inherit",

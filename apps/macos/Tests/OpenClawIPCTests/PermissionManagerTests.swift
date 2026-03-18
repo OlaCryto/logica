@@ -1,7 +1,7 @@
-import OpenClawIPC
+import LogicaIPC
 import CoreLocation
 import Testing
-@testable import OpenClaw
+@testable import Logica
 
 @Suite(.serialized)
 @MainActor

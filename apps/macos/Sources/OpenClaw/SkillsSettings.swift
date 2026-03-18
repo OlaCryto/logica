@@ -1,4 +1,4 @@
-import OpenClawProtocol
+import LogicaProtocol
 import Observation
 import SwiftUI
 
@@ -231,15 +231,15 @@ private struct SkillRow: View {
 
     private var sourceLabel: String {
         switch self.skill.source {
-        case "openclaw-bundled":
+        case "logica-bundled":
             "Bundled"
-        case "openclaw-managed":
+        case "logica-managed":
             "Managed"
-        case "openclaw-workspace":
+        case "logica-workspace":
             "Workspace"
-        case "openclaw-extra":
+        case "logica-extra":
             "Extra"
-        case "openclaw-plugin":
+        case "logica-plugin":
             "Plugin"
         default:
             self.skill.source
@@ -580,7 +580,7 @@ extension SkillsSettings {
         let skill = SkillStatus(
             name: "Test Skill",
             description: "Test description",
-            source: "openclaw-bundled",
+            source: "logica-bundled",
             filePath: "/tmp/skills/test",
             baseDir: "/tmp/skills",
             skillKey: "test",

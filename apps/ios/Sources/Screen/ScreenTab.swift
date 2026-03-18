@@ -1,4 +1,4 @@
-import OpenClawKit
+import LogicaKit
 import SwiftUI
 
 struct ScreenTab: View {

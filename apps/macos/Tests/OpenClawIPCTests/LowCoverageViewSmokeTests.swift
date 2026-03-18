@@ -1,9 +1,9 @@
 import AppKit
-import OpenClawProtocol
+import LogicaProtocol
 import SwiftUI
 import Testing
 
-@testable import OpenClaw
+@testable import Logica
 
 @Suite(.serialized)
 @MainActor

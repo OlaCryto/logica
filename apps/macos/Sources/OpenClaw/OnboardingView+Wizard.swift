@@ -1,4 +1,4 @@
-import OpenClawProtocol
+import LogicaProtocol
 import Observation
 import SwiftUI
 

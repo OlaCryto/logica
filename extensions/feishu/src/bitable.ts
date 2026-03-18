@@ -1,4 +1,4 @@
-import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
+import type { LogicaPluginApi } from "logica/plugin-sdk";
 import { Type } from "@sinclair/typebox";
 import type { FeishuConfig } from "./types.js";
 import { createFeishuClient } from "./client.js";
@@ -309,7 +309,7 @@ const UpdateRecordSchema = Type.Object({
 
 // ============ Tool Registration ============
 
-export function registerFeishuBitableTools(api: OpenClawPluginApi) {
+export function registerFeishuBitableTools(api: LogicaPluginApi) {
   const feishuCfg = api.config?.channels?.feishu as FeishuConfig | undefined;
   if (!feishuCfg?.appId || !feishuCfg?.appSecret) {
     api.logger.debug?.("feishu_bitable: Feishu credentials not configured, skipping bitable tools");

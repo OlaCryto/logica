@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: openclaw
+    name: logica
     runtime: docker
     plan: starter
     healthCheckPath: /health
@@ -9,13 +9,13 @@ services:
         value: "8080"
       - key: SETUP_PASSWORD
         sync: false
-      - key: OPENCLAW_STATE_DIR
-        value: /data/.openclaw
-      - key: OPENCLAW_WORKSPACE_DIR
+      - key: LOGICA_STATE_DIR
+        value: /data/.logica
+      - key: LOGICA_WORKSPACE_DIR
         value: /data/workspace
-      - key: OPENCLAW_GATEWAY_TOKEN
+      - key: LOGICA_GATEWAY_TOKEN
         generateValue: true
     disk:
-      name: openclaw-data
+      name: logica-data
       mountPath: /data
       sizeGB: 1

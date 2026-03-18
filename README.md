@@ -28,7 +28,7 @@ Most AI agents are chatbots with a wallet. Logica is different:
 - **Signals intelligence** — analyzes funding rates, whale orderbook depth, RSI, momentum before every trade
 - **Social agent** — buys tickets, enters chatrooms, DMs, follows, posts threads on Arena
 - **Economically sustainable** — earns through trading, staking rewards, and X402 micropayments
-- **Full OpenClaw power** — Telegram, WhatsApp, Discord, Slack, browser, voice, memory, 60 skills
+- **Full Logica power** — Telegram, WhatsApp, Discord, Slack, browser, voice, memory, 60 skills
 
 ## 8 Arena Modules
 
@@ -43,7 +43,7 @@ Most AI agents are chatbots with a wallet. Logica is different:
 | **Bridge** | Move assets from 15+ chains to Avalanche |
 | **Staking** | Stake ARENA tokens, earn from every launchpad graduation |
 
-Plus 52 original OpenClaw skills (Spotify, GitHub, Notion, 1Password, weather, voice, browser, and more).
+Plus 52 original Logica skills (Spotify, GitHub, Notion, 1Password, weather, voice, browser, and more).
 
 ## Quick Start
 
@@ -84,7 +84,7 @@ logica/
 │   ├── arena-dex/        # DEX swap aggregation
 │   ├── arena-bridge/     # Cross-chain bridging
 │   ├── arena-staking/    # ARENA staking
-│   └── ...               # 52 original OpenClaw skills
+│   └── ...               # 52 original Logica skills
 ├── extensions/           # Channel plugins (Discord, Telegram, Slack, etc.)
 ├── apps/                 # Native apps (macOS, iOS, Android)
 ├── ui/                   # Web control UI
@@ -167,4 +167,4 @@ The roadmap:
 
 ## License
 
-MIT — same as OpenClaw. Use it, fork it, build on it.
+MIT — same as Logica. Use it, fork it, build on it.
