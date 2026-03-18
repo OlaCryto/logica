@@ -1,13 +1,13 @@
 {
-  "name": "@openclaw/telegram",
+  "name": "@logica/telegram",
   "version": "2026.2.9",
   "private": true,
-  "description": "OpenClaw Telegram channel plugin",
+  "description": "Logica Telegram channel plugin",
   "type": "module",
   "devDependencies": {
-    "openclaw": "workspace:*"
+    "logica": "workspace:*"
   },
-  "openclaw": {
+  "logica": {
     "extensions": [
       "./index.ts"
     ]

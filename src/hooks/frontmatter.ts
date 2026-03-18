@@ -1,6 +1,6 @@
 import JSON5 from "json5";
 import type {
-  OpenClawHookMetadata,
+  LogicaHookMetadata,
   HookEntry,
   HookInstallSpec,
   HookInvocationPolicy,
@@ -76,9 +76,9 @@ function parseFrontmatterBool(value: string | undefined, fallback: boolean): boo
   return parsed === undefined ? fallback : parsed;
 }
 
-export function resolveOpenClawMetadata(
+export function resolveLogicaMetadata(
   frontmatter: ParsedHookFrontmatter,
-): OpenClawHookMetadata | undefined {
+): LogicaHookMetadata | undefined {
   const raw = getFrontmatterValue(frontmatter, "metadata");
   if (!raw) {
     return undefined;

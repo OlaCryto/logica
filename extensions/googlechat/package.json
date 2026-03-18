@@ -1,19 +1,19 @@
 {
-  "name": "@openclaw/googlechat",
+  "name": "@logica/googlechat",
   "version": "2026.2.9",
   "private": true,
-  "description": "OpenClaw Google Chat channel plugin",
+  "description": "Logica Google Chat channel plugin",
   "type": "module",
   "dependencies": {
     "google-auth-library": "^10.5.0"
   },
   "devDependencies": {
-    "openclaw": "workspace:*"
+    "logica": "workspace:*"
   },
   "peerDependencies": {
-    "openclaw": ">=2026.1.26"
+    "logica": ">=2026.1.26"
   },
-  "openclaw": {
+  "logica": {
     "extensions": [
       "./index.ts"
     ],
@@ -32,7 +32,7 @@
       "order": 55
     },
     "install": {
-      "npmSpec": "@openclaw/googlechat",
+      "npmSpec": "@logica/googlechat",
       "localPath": "extensions/googlechat",
       "defaultChoice": "npm"
     }

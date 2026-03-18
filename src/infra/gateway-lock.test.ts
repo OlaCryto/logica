@@ -8,15 +8,15 @@ import { resolveConfigPath, resolveGatewayLockDir, resolveStateDir } from "../co
 import { acquireGatewayLock, GatewayLockError } from "./gateway-lock.js";
 
 async function makeEnv() {
-  const dir = await fs.mkdtemp(path.join(os.tmpdir(), "openclaw-gateway-lock-"));
-  const configPath = path.join(dir, "openclaw.json");
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), "logica-gateway-lock-"));
+  const configPath = path.join(dir, "logica.json");
   await fs.writeFile(configPath, "{}", "utf8");
   await fs.mkdir(resolveGatewayLockDir(), { recursive: true });
   return {
     env: {
       ...process.env,
-      OPENCLAW_STATE_DIR: dir,
-      OPENCLAW_CONFIG_PATH: configPath,
+      LOGICA_STATE_DIR: dir,
+      LOGICA_CONFIG_PATH: configPath,
     },
     cleanup: async () => {
       await fs.rm(dir, { recursive: true, force: true });

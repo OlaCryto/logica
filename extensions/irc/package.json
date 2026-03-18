@@ -1,12 +1,12 @@
 {
-  "name": "@openclaw/irc",
+  "name": "@logica/irc",
   "version": "2026.2.9",
-  "description": "OpenClaw IRC channel plugin",
+  "description": "Logica IRC channel plugin",
   "type": "module",
   "devDependencies": {
-    "openclaw": "workspace:*"
+    "logica": "workspace:*"
   },
-  "openclaw": {
+  "logica": {
     "extensions": [
       "./index.ts"
     ]

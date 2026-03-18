@@ -1,29 +1,29 @@
 type StateDirEnvSnapshot = {
-  openclawStateDir: string | undefined;
+  logicaStateDir: string | undefined;
   clawdbotStateDir: string | undefined;
 };
 
 export function snapshotStateDirEnv(): StateDirEnvSnapshot {
   return {
-    openclawStateDir: process.env.OPENCLAW_STATE_DIR,
-    clawdbotStateDir: process.env.CLAWDBOT_STATE_DIR,
+    logicaStateDir: process.env.LOGICA_STATE_DIR,
+    clawdbotStateDir: process.env.LOGICA_STATE_DIR,
   };
 }
 
 export function restoreStateDirEnv(snapshot: StateDirEnvSnapshot): void {
-  if (snapshot.openclawStateDir === undefined) {
-    delete process.env.OPENCLAW_STATE_DIR;
+  if (snapshot.logicaStateDir === undefined) {
+    delete process.env.LOGICA_STATE_DIR;
   } else {
-    process.env.OPENCLAW_STATE_DIR = snapshot.openclawStateDir;
+    process.env.LOGICA_STATE_DIR = snapshot.logicaStateDir;
   }
   if (snapshot.clawdbotStateDir === undefined) {
-    delete process.env.CLAWDBOT_STATE_DIR;
+    delete process.env.LOGICA_STATE_DIR;
   } else {
-    process.env.CLAWDBOT_STATE_DIR = snapshot.clawdbotStateDir;
+    process.env.LOGICA_STATE_DIR = snapshot.clawdbotStateDir;
   }
 }
 
 export function setStateDirEnv(stateDir: string): void {
-  process.env.OPENCLAW_STATE_DIR = stateDir;
-  delete process.env.CLAWDBOT_STATE_DIR;
+  process.env.LOGICA_STATE_DIR = stateDir;
+  delete process.env.LOGICA_STATE_DIR;
 }

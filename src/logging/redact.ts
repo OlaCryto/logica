@@ -1,5 +1,5 @@
 import { createRequire } from "node:module";
-import type { OpenClawConfig } from "../config/config.js";
+import type { LogicaConfig } from "../config/config.js";
 
 const requireConfig = createRequire(import.meta.url);
 
@@ -106,10 +106,10 @@ function redactText(text: string, patterns: RegExp[]): string {
 }
 
 function resolveConfigRedaction(): RedactOptions {
-  let cfg: OpenClawConfig["logging"] | undefined;
+  let cfg: LogicaConfig["logging"] | undefined;
   try {
     const loaded = requireConfig("../config/config.js") as {
-      loadConfig?: () => OpenClawConfig;
+      loadConfig?: () => LogicaConfig;
     };
     cfg = loaded.loadConfig?.().logging;
   } catch {

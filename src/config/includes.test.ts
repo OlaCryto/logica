@@ -9,17 +9,17 @@ import {
 
 const ROOT_DIR = path.parse(process.cwd()).root;
 const CONFIG_DIR = path.join(ROOT_DIR, "config");
-const ETC_OPENCLAW_DIR = path.join(ROOT_DIR, "etc", "openclaw");
+const ETC_LOGICA_DIR = path.join(ROOT_DIR, "etc", "logica");
 const SHARED_DIR = path.join(ROOT_DIR, "shared");
 
-const DEFAULT_BASE_PATH = path.join(CONFIG_DIR, "openclaw.json");
+const DEFAULT_BASE_PATH = path.join(CONFIG_DIR, "logica.json");
 
 function configPath(...parts: string[]) {
   return path.join(CONFIG_DIR, ...parts);
 }
 
-function etcOpenClawPath(...parts: string[]) {
-  return path.join(ETC_OPENCLAW_DIR, ...parts);
+function etcLogicaPath(...parts: string[]) {
+  return path.join(ETC_LOGICA_DIR, ...parts);
 }
 
 function sharedPath(...parts: string[]) {
@@ -68,7 +68,7 @@ describe("resolveConfigIncludes", () => {
   });
 
   it("resolves absolute path $include", () => {
-    const absolute = etcOpenClawPath("agents.json");
+    const absolute = etcLogicaPath("agents.json");
     const files = { [absolute]: { list: [{ id: "main" }] } };
     const obj = { agents: { $include: absolute } };
     expect(resolve(obj, files)).toEqual({
@@ -281,7 +281,7 @@ describe("resolveConfigIncludes", () => {
   it("resolves parent directory references", () => {
     const files = { [sharedPath("common.json")]: { shared: true } };
     const obj = { $include: "../../shared/common.json" };
-    expect(resolve(obj, files, configPath("sub", "openclaw.json"))).toEqual({
+    expect(resolve(obj, files, configPath("sub", "logica.json"))).toEqual({
       shared: true,
     });
   });

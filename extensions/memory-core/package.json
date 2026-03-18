@@ -1,16 +1,16 @@
 {
-  "name": "@openclaw/memory-core",
+  "name": "@logica/memory-core",
   "version": "2026.2.9",
   "private": true,
-  "description": "OpenClaw core memory search plugin",
+  "description": "Logica core memory search plugin",
   "type": "module",
   "devDependencies": {
-    "openclaw": "workspace:*"
+    "logica": "workspace:*"
   },
   "peerDependencies": {
-    "openclaw": ">=2026.1.26"
+    "logica": ">=2026.1.26"
   },
-  "openclaw": {
+  "logica": {
     "extensions": [
       "./index.ts"
     ]

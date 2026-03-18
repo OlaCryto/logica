@@ -14,30 +14,30 @@ type CommandOptions = Record<string, unknown>;
 
 const SANDBOX_EXAMPLES = {
   main: [
-    ["openclaw sandbox list", "List all sandbox containers."],
-    ["openclaw sandbox list --browser", "List only browser containers."],
-    ["openclaw sandbox recreate --all", "Recreate all containers."],
-    ["openclaw sandbox recreate --session main", "Recreate a specific session."],
-    ["openclaw sandbox recreate --agent mybot", "Recreate agent containers."],
-    ["openclaw sandbox explain", "Explain effective sandbox config."],
+    ["logica sandbox list", "List all sandbox containers."],
+    ["logica sandbox list --browser", "List only browser containers."],
+    ["logica sandbox recreate --all", "Recreate all containers."],
+    ["logica sandbox recreate --session main", "Recreate a specific session."],
+    ["logica sandbox recreate --agent mybot", "Recreate agent containers."],
+    ["logica sandbox explain", "Explain effective sandbox config."],
   ],
   list: [
-    ["openclaw sandbox list", "List all sandbox containers."],
-    ["openclaw sandbox list --browser", "List only browser containers."],
-    ["openclaw sandbox list --json", "JSON output."],
+    ["logica sandbox list", "List all sandbox containers."],
+    ["logica sandbox list --browser", "List only browser containers."],
+    ["logica sandbox list --json", "JSON output."],
   ],
   recreate: [
-    ["openclaw sandbox recreate --all", "Recreate all containers."],
-    ["openclaw sandbox recreate --session main", "Recreate a specific session."],
-    ["openclaw sandbox recreate --agent mybot", "Recreate a specific agent (includes sub-agents)."],
-    ["openclaw sandbox recreate --browser --all", "Recreate only browser containers."],
-    ["openclaw sandbox recreate --all --force", "Skip confirmation."],
+    ["logica sandbox recreate --all", "Recreate all containers."],
+    ["logica sandbox recreate --session main", "Recreate a specific session."],
+    ["logica sandbox recreate --agent mybot", "Recreate a specific agent (includes sub-agents)."],
+    ["logica sandbox recreate --browser --all", "Recreate only browser containers."],
+    ["logica sandbox recreate --all --force", "Skip confirmation."],
   ],
   explain: [
-    ["openclaw sandbox explain", "Show effective sandbox config."],
-    ["openclaw sandbox explain --session agent:main:main", "Explain a specific session."],
-    ["openclaw sandbox explain --agent work", "Explain an agent sandbox."],
-    ["openclaw sandbox explain --json", "JSON output."],
+    ["logica sandbox explain", "Show effective sandbox config."],
+    ["logica sandbox explain --session agent:main:main", "Explain a specific session."],
+    ["logica sandbox explain --agent work", "Explain an agent sandbox."],
+    ["logica sandbox explain --json", "JSON output."],
   ],
 } as const;
 
@@ -67,7 +67,7 @@ export function registerSandboxCli(program: Command) {
     .addHelpText(
       "after",
       () =>
-        `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/sandbox", "docs.openclaw.ai/cli/sandbox")}\n`,
+        `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/sandbox", "docs.logica.ai/cli/sandbox")}\n`,
     )
     .action(() => {
       sandbox.help({ error: true });

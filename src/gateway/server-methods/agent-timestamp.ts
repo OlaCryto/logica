@@ -1,4 +1,4 @@
-import type { OpenClawConfig } from "../../config/types.js";
+import type { LogicaConfig } from "../../config/types.js";
 import { resolveUserTimezone } from "../../agents/date-time.js";
 import { formatZonedTimestamp } from "../../infra/format-time/format-datetime.ts";
 
@@ -71,9 +71,9 @@ export function injectTimestamp(message: string, opts?: TimestampInjectionOption
 }
 
 /**
- * Build TimestampInjectionOptions from an OpenClawConfig.
+ * Build TimestampInjectionOptions from an LogicaConfig.
  */
-export function timestampOptsFromConfig(cfg: OpenClawConfig): TimestampInjectionOptions {
+export function timestampOptsFromConfig(cfg: LogicaConfig): TimestampInjectionOptions {
   return {
     timezone: resolveUserTimezone(cfg.agents?.defaults?.userTimezone),
   };

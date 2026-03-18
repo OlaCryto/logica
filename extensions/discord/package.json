@@ -1,12 +1,12 @@
 {
-  "name": "@openclaw/discord",
+  "name": "@logica/discord",
   "version": "2026.2.9",
-  "description": "OpenClaw Discord channel plugin",
+  "description": "Logica Discord channel plugin",
   "type": "module",
   "devDependencies": {
-    "openclaw": "workspace:*"
+    "logica": "workspace:*"
   },
-  "openclaw": {
+  "logica": {
     "extensions": [
       "./index.ts"
     ]

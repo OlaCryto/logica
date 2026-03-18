@@ -81,43 +81,43 @@ vi.mock("./progress.js", () => ({
 
 describe("daemon-cli coverage", () => {
   const originalEnv = {
-    OPENCLAW_STATE_DIR: process.env.OPENCLAW_STATE_DIR,
-    OPENCLAW_CONFIG_PATH: process.env.OPENCLAW_CONFIG_PATH,
-    OPENCLAW_GATEWAY_PORT: process.env.OPENCLAW_GATEWAY_PORT,
-    OPENCLAW_PROFILE: process.env.OPENCLAW_PROFILE,
+    LOGICA_STATE_DIR: process.env.LOGICA_STATE_DIR,
+    LOGICA_CONFIG_PATH: process.env.LOGICA_CONFIG_PATH,
+    LOGICA_GATEWAY_PORT: process.env.LOGICA_GATEWAY_PORT,
+    LOGICA_PROFILE: process.env.LOGICA_PROFILE,
   };
 
   beforeEach(() => {
-    process.env.OPENCLAW_STATE_DIR = "/tmp/openclaw-cli-state";
-    process.env.OPENCLAW_CONFIG_PATH = "/tmp/openclaw-cli-state/openclaw.json";
-    delete process.env.OPENCLAW_GATEWAY_PORT;
-    delete process.env.OPENCLAW_PROFILE;
+    process.env.LOGICA_STATE_DIR = "/tmp/logica-cli-state";
+    process.env.LOGICA_CONFIG_PATH = "/tmp/logica-cli-state/logica.json";
+    delete process.env.LOGICA_GATEWAY_PORT;
+    delete process.env.LOGICA_PROFILE;
     serviceReadCommand.mockResolvedValue(null);
   });
 
   afterEach(() => {
-    if (originalEnv.OPENCLAW_STATE_DIR !== undefined) {
-      process.env.OPENCLAW_STATE_DIR = originalEnv.OPENCLAW_STATE_DIR;
+    if (originalEnv.LOGICA_STATE_DIR !== undefined) {
+      process.env.LOGICA_STATE_DIR = originalEnv.LOGICA_STATE_DIR;
     } else {
-      delete process.env.OPENCLAW_STATE_DIR;
+      delete process.env.LOGICA_STATE_DIR;
     }
 
-    if (originalEnv.OPENCLAW_CONFIG_PATH !== undefined) {
-      process.env.OPENCLAW_CONFIG_PATH = originalEnv.OPENCLAW_CONFIG_PATH;
+    if (originalEnv.LOGICA_CONFIG_PATH !== undefined) {
+      process.env.LOGICA_CONFIG_PATH = originalEnv.LOGICA_CONFIG_PATH;
     } else {
-      delete process.env.OPENCLAW_CONFIG_PATH;
+      delete process.env.LOGICA_CONFIG_PATH;
     }
 
-    if (originalEnv.OPENCLAW_GATEWAY_PORT !== undefined) {
-      process.env.OPENCLAW_GATEWAY_PORT = originalEnv.OPENCLAW_GATEWAY_PORT;
+    if (originalEnv.LOGICA_GATEWAY_PORT !== undefined) {
+      process.env.LOGICA_GATEWAY_PORT = originalEnv.LOGICA_GATEWAY_PORT;
     } else {
-      delete process.env.OPENCLAW_GATEWAY_PORT;
+      delete process.env.LOGICA_GATEWAY_PORT;
     }
 
-    if (originalEnv.OPENCLAW_PROFILE !== undefined) {
-      process.env.OPENCLAW_PROFILE = originalEnv.OPENCLAW_PROFILE;
+    if (originalEnv.LOGICA_PROFILE !== undefined) {
+      process.env.LOGICA_PROFILE = originalEnv.LOGICA_PROFILE;
     } else {
-      delete process.env.OPENCLAW_PROFILE;
+      delete process.env.LOGICA_PROFILE;
     }
   });
 
@@ -148,10 +148,10 @@ describe("daemon-cli coverage", () => {
     serviceReadCommand.mockResolvedValueOnce({
       programArguments: ["/bin/node", "cli", "gateway", "--port", "19001"],
       environment: {
-        OPENCLAW_PROFILE: "dev",
-        OPENCLAW_STATE_DIR: "/tmp/openclaw-daemon-state",
-        OPENCLAW_CONFIG_PATH: "/tmp/openclaw-daemon-state/openclaw.json",
-        OPENCLAW_GATEWAY_PORT: "19001",
+        LOGICA_PROFILE: "dev",
+        LOGICA_STATE_DIR: "/tmp/logica-daemon-state",
+        LOGICA_CONFIG_PATH: "/tmp/logica-daemon-state/logica.json",
+        LOGICA_GATEWAY_PORT: "19001",
       },
       sourcePath: "/tmp/bot.molt.gateway.plist",
     });
